@@ -19,31 +19,34 @@ export default GiphyModal = forwardRef((props, ref) => {
 
   // variables
   const [searchText, setSearchText] = useState('')
+  const [selfShow, setSelfShow] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const snapPoints = useMemo(() => [0, '90%'], [])
   const debouncedSearchText = useDebounce(searchText, 1000)
 
   useImperativeHandle(ref, () => ({
     show() {
+      setSelfShow(true)
       bottomSheetRef.current.expand()
     },
     close() {
+      setSelfShow(false)
       bottomSheetRef.current.close()
     },
   }))
 
-  //api calls hooks
+  // api calls hooks
   const {
     data: trendingArray,
     fetchMore: fetchMoreTrendingGif,
     resetValues: resetValuesTrending,
-  } = useTrending(giphyApiKey)
+  } = useTrending(giphyApiKey, selfShow)
 
   const {
     data: searchArray,
     fetchMore: fetchMoreSearchGif,
     resetValues: resetValuesSearch,
-  } = useSearch(debouncedSearchText, giphyApiKey)
+  } = useSearch(debouncedSearchText, giphyApiKey, selfShow)
 
   const handleSheetChanges = useCallback((index) => {
     if (index == 0) {
@@ -105,8 +108,8 @@ export default GiphyModal = forwardRef((props, ref) => {
       snapPoints={snapPoints}
       onChange={handleSheetChanges}
     >
-        {renderHeader()}
-        {renderList()}
+      {renderHeader()}
+      {renderList()}
     </BottomSheet>
   )
 })

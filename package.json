@@ -1,6 +1,6 @@
 {
   "name": "react-native-giphy-modal",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Giphy modal to select gif made using Giphy Api.",
   "homepage": "https://github.com/damithg-dev/react-native-giphy-modal#readme",
   "main": "src/index.js",
