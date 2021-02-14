@@ -24,8 +24,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "^17.0.1",
-    "react-native": "^0.63.4",
     "@gorhom/bottom-sheet": "^2"
   },
   "devDependencies": {
