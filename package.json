@@ -1,0 +1,66 @@
+{
+  "name": "react-native-giphy-modal",
+  "version": "1.0.2",
+  "description": "Giphy modal to select gif made using Giphy Api.",
+  "homepage": "https://github.com/damithg-dev/react-native-giphy-modal#readme",
+  "main": "src/index.js",
+  "author": "Damith Amarasinghe <hello@damithg.dev>",
+  "license": "MIT",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "react-native",
+    "reactnative",
+    "giphy",
+    "gif",
+    "modal",
+    "react-native-giphy",
+    "react-native-gif",
+    "react-native-giphy-modal"
+  ],
+  "scripts": {
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-native": "^0.63.4",
+    "@gorhom/bottom-sheet": "^2"
+  },
+  "devDependencies": {
+    "@gorhom/bottom-sheet": "^2",
+    "@babel/core": "^7.12.10",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/jest": "^26.0.20",
+    "@types/react-native": "^0.63.46",
+    "@types/react-test-renderer": "^17.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.19.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.65.0",
+    "react": "^17.0.1",
+    "react-native": "^0.63.4",
+    "react-test-renderer": "^17.0.1",
+    "typescript": "^4.1.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-gesture-handler": ">=1.10.0",
+    "react-native-reanimated": ">=1.13.2"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
